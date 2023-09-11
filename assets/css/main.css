@@ -45,5 +45,5 @@ p{font-size:17px;line-height:27px;margin-bottom:15px;color:#fff}a{color:#fff;tex
     }
   }
   .carousel-item .play-btn {
-    transform: translate(-50%);
+   transform: translate(-50% ,-50%);
   }
