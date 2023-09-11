@@ -37,6 +37,11 @@ a, a:hover, img, .form-control, .form-control:hover, button {
         background-image: none;
     color: #fff;
 }
+img {
+    border: none;
+    outline: none;
+    max-width: 100%;
+}
 body{
     overflow-x: hidden;
     background-color: #1b0e22;
@@ -592,13 +597,12 @@ transition: all .5s;
 .latest-matches-list {
     background: linear-gradient(90deg,rgba(105,85,180,0.1) 0%,rgba(105,85,180,0.3) 50%,rgba(105,85,180,0.1) 100%);
     clip-path: polygon(95% 0,100% 20%,100% 100%,0% 100%,0 66%,0 0);
-    display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
+   
     align-items: center;
     padding: 20px 30px;
     border-radius: 5px;
     position: relative;
-    -webkit-transition: all .3s cubic-bezier(.165,.84,.44,1);
+   
     transition: all .3s cubic-bezier(.165,.84,.44,1)
 }
 
@@ -979,8 +983,10 @@ transition: all .5s;
 
 .contact-form-group {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-gap: 15px
+}
+.contact-form-group .form-field.message {
+    grid-column-end: span 2;
 }
 
 .contact-form-group .form-field .form-control {
@@ -995,19 +1001,13 @@ transition: all .5s;
     box-shadow: 0 2px 5px 0 rgb(0 0 0/20%)
 }
 
-.contact-form-group .form-field.message {
-    grid-column-end: span 2
-}
+
 
 .contact-form-group .form-field.message .form-control {
     height: 150px
 }
 
-#form-messages {
-    display: none;
-    margin-top: 15px;
-    margin-bottom: 0
-}
+
 
 .contact-title {
     margin-bottom: 30px
@@ -1375,11 +1375,7 @@ outline: none;}
 ----------------------------------------------------- */
 /* elements css */
 
-img {
-    border: none;
-    outline: none;
-    max-width: 100%;
-}
+
 .page-header {
     width: 100%;
     height: 400px;
@@ -1391,9 +1387,6 @@ img {
     z-index: 1
 }
 
-.page-header.single {
-    height: 550px
-}
 
 .page-header.error404 {
     height: 600px
@@ -1484,9 +1477,7 @@ img {
     margin-bottom: 20px
 }
 
-.page-header.single .page-header-info h2 {
-    line-height: 52px
-}
+
 
 .page-header-info p {
     color: #ddd;
@@ -1497,70 +1488,7 @@ img {
     margin-top: 20px
 }
 
-.team-details .shape {
-    display: none
-}
-
-.team-details .page-header-info {
-    margin-top: -50px
-}
-
-.team-details .page-header-info img {
-    max-width: 150px;
-    margin-bottom: 20px
-}
-
-.team-details .page-header-info h2 {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1
-}
-
-.team-details .page-header-info h2 span {
-    display: block;
-    color: #9841ff;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0;
-    margin-top: 10px
-}
-
-.player-details .player-thumb {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0/20%);
-    border: 15px solid rgba(152,65,255,.3);
-    margin: 0 auto;
-    margin-bottom: 20px;
-    position: relative
-}
-
-.player-details .player-thumb:before {
-    border: 7px solid rgba(152,65,255,.5);
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: calc(100% + 14px);
-    height: calc(100% + 14px);
-    transform: translate(-50%,-50%);
-    border-radius: 50%;
-    z-index: 1
-}
-
-.player-details .player-thumb img {
-    border-radius: 50%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center
-}
+/*  */
 
 .overlay {
     background-color: rgba(147,65,255,.2);
@@ -1580,20 +1508,7 @@ img {
 }
 
 /* ----------------------------------------------------- shop css ------------------------------------------------- */
-.shop-carousel,.shop-section.single {
-    position: relative
-}
 
-.shop-section.single:before {
-    background: linear-gradient(90deg,rgba(152,65,255,0.1) 0%,rgba(152,65,255,1) 50%,rgba(152,65,255,0.1) 100%);
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    left: 0;
-    bottom: 0;
-    z-index: 1
-}
 
 
 .product-shorting {
@@ -1609,24 +1524,14 @@ img {
         display:block
     }
 
-    .product-shorting .orderby {
-        margin-top: 15px
-    }
+    
 }
 
 .product-shorting div {
     color: #ddd
 }
 
-.product-shorting .orderby {
-    background-color: rgba(152,65,255,.3);
-    padding: 0 10px;
-    height: 30px;
-    border: none;
-    outline: none;
-    box-shadow: none;
-    color: #ddd
-}
+
 
 
 .product-thumb {
@@ -1758,7 +1663,7 @@ img {
 .product-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 15px;
+    grid-column-gap: 20px;
     align-items: center
 }
 
@@ -1854,7 +1759,7 @@ img {
 }
 
 .range-slider input {
-    -webkit-appearance: none;
+    
     appearance: none;
     width: 100%;
     height: 10px;
@@ -2119,12 +2024,13 @@ img {
     border-radius: 2px;
     padding: 40px
 }
-
+.form-field{margin-bottom: 15px;}
+.form-field{margin-right: 15px;}
 .checkout-form {
-    display: grid;
+   display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 15px
-}
+    
+} 
 
 .checkout-form-wrap h2 {
     font-size: 20px;
@@ -2178,10 +2084,7 @@ img {
         margin-top: 20px
     }
 
-    .review .comment-list {
-        grid-template-columns: 1fr
-    }
-
+   
     .cart-header {
         display: none
     }
@@ -2365,119 +2268,11 @@ img {
     object-position: center
 }
 
-.post-details p {
-    font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 40px
-}
 
-blockquote {
-    background: linear-gradient(90deg,rgba(105,85,180,0.1) 0%,rgba(105,85,180,0.3) 50%,rgba(105,85,180,0.1) 100%);
-    padding: 40px;
-    border: none;
-    border-left: 3px solid #9841ff;
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 500;
-    color: #fff;
-    display: block;
-    margin: 0;
-    margin-bottom: 40px
-}
 
-blockquote i.fas {
-    color: #9841ff;
-    display: block;
-    margin-bottom: 20px
-}
 
-blockquote span {
-    font-family: oxanium,sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #9841ff;
-    display: block;
-    margin-top: 10px
-}
 
-.post-details-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 10px;
-    margin: 40px 0
-}
 
-.post-details .tags li a {
-    margin: 0
-}
-
-.post-navigation {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 50px;
-    align-items: center;
-    margin: 40px 0
-}
-
-.post-navigation li:last-child {
-    text-align: right
-}
-
-.post-navigation li a {
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 600;
-    color: #fff;
-    letter-spacing: -.5px
-}
-
-.post-navigation li a:hover {
-    text-decoration: underline
-}
-
-.post-navigation li a:hover>span {
-    text-decoration: none
-}
-
-.post-navigation li a span {
-    font-family: oxanium,sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color: #a5a6aa;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 10px;
-    text-decoration: none
-}
-
-.post-navigation li a span i {
-    color: #a5a6aa;
-    margin-right: 5px
-}
-
-.post-navigation li:last-child a span i {
-    margin-left: 5px;
-    margin-right: auto
-}
-
-.author-box {
-    background: linear-gradient(90deg,rgba(105,85,180,0.1) 0%,rgba(105,85,180,0.3) 50%,rgba(105,85,180,0.1) 100%);
-    padding: 40px;
-    border: none;
-    border-radius: 2px;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 80px 1fr;
-    grid-column-gap: 20px;
-    line-height: 1;
-    margin-bottom: 40px
-}
-
-.author-info p {
-    margin-bottom: 20px
-}
 
 .social-icon {
     margin-left: -3px
@@ -2495,104 +2290,6 @@ blockquote span {
     margin-right: 10px
 }
 
-.comments-box {
-    margin-bottom: 40px
-}
-
-.comment-title {
-    font-weight: 600;
-    color: #fff;
-    display: inline-block;
-    padding-bottom: 10px;
-    position: relative;
-    margin-bottom: 30px;
-    line-height: 1
-}
-
-.comment-title:before {
-    background-color: #9841ff;
-    width: 50%;
-    height: 4px;
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0
-}
-
-.comments-box .comment-inner {
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    grid-column-gap: 20px
-}
-
-.comments-box .comment {
-    margin-bottom: 40px
-}
-
-.comments-box .children {
-    margin-left: 50px;
-    margin-top: 40px
-}
-
-.comments-box .comment-thumb img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-top: 5px
-}
-
-.comments-meta h4 {
-    font-size: 20px;
-    font-weight: 500;
-    display: block
-}
-
-.comments-meta h4 span {
-    font-family: oxanium,sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #ddd;
-    display: block
-}
-
-.comment-area p {
-    font-size: 17px;
-    line-height: 27px;
-    margin-bottom: 10px
-}
-
-.comment-area .reply {
-    font-family: oxanium,sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #9841ff
-}
-
-.comment-form {
-    margin-top: -15px
-}
-
-.comment-form .form-control {
-    background-color: rgba(12,12,53,.9);
-    height: 60px;
-    border-radius: 2px;
-    border: 2px solid rgba(152,65,255,.3);
-    box-shadow: 0 2px 5px 0 rgb(0 0 0/20%);
-    outline: none;
-    color: #fff
-}
-
-.comment-form .form-control.comment {
-    height: 150px
-}
-
-#form-messages {
-    display: none;
-    margin-top: 15px;
-    margin-bottom: 0
-}
 
 
 
@@ -2919,11 +2616,7 @@ blockquote span {
         font-size: 50px
     }
 
-    .outside-spacing {
-        overflow: hidden;
-        padding: 0;
-        margin: 0 20px
-    }
+    
 
     .team-content {
         width: 90%
@@ -2963,30 +2656,8 @@ blockquote span {
         width: 60%
     }
 
-    .match-details-header {
-        width: 90%
-    }
-
-    .match-details-header .vs h2 {
-        font-size: 50px
-    }
-
-    .team-details-wrap {
-        grid-template-columns: 1fr;
-        width: 100%
-    }
-
-    .team-details-wrap .rating,.team-details-wrap .social-list {
-        display: none
-    }
-
-    .player-details .team-details-wrap {
-        grid-template-columns: 1fr 2fr
-    }
-
-    .player-info {
-        gap: 30px
-    }
+    
+    
 
     .hero-section-2 {
         height: 450px
@@ -3033,10 +2704,7 @@ blockquote span {
         max-width: 150px
     }
 
-    .header .default-btn,.header .search-icon {
-        display: none
-    }
-
+    
     .hero-element .shape-wrap {
         display: none
     }
@@ -3117,12 +2785,7 @@ blockquote span {
         margin-top: 20px
     }
 
-    .latest-matches-list {
-        grid-template-columns: 1fr;
-        padding: 20px;
-        clip-path: none
-    }
-
+  
     .watch-info {
         text-align: left
     }
@@ -3143,13 +2806,9 @@ blockquote span {
         max-width: 100%
     }
 
-    .sponsor-grid {
-        grid-template-columns: repeat(2,1fr)
-    }
+    
 
-    .page-header.single .page-header-info h2 {
-        line-height: 42px
-    }
+   
 
     .footer-section {
         padding-top: 60px
@@ -3176,40 +2835,10 @@ blockquote span {
         right: -15px
     }
 
-    .match-details-header .vs {
-        width: 90px;
-        height: 80px
-    }
+    
 
-    .match-details-header .vs h2 {
-        font-size: 42px
-    }
-
-    .page-header.match-details {
-        height: 300px
-    }
-
-    .team-details-wrap {
-        padding: 0 20px
-    }
-
-    .team-counter .counter-list .odometer-inside span {
-        font-size: 28px;
-        line-height: 1
-    }
-
-    .player-info {
-        display: none
-    }
-
-    .player-details .team-details-wrap {
-        grid-template-columns: 1fr
-    }
-
-    .player-team {
-        justify-content: center
-    }
-
+    
+   
     .hero-section-2 {
         height: 300px;
         margin-bottom: 30px
@@ -3250,18 +2879,4 @@ blockquote span {
     }
 }
 
-@media all and (max-width: 580px) {
-    #scrollup {
-        bottom:20px;
-        right: 20px
-    }
 
-    .swiper-nav {
-        display: none
-    }
-
-    .primary-header .header-logo {
-        max-width: 110px;
-        padding: 10px 0
-    }
-}
