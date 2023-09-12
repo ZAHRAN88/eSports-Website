@@ -26,7 +26,7 @@
 
 </head>
 <body>
-  <nav class="navbar p-4 navbar-expand-lg bg-body-tertiary">
+  <header> <nav class="navbar p-4 navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand justify-content-center" href="#"> LevelUpia</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +37,15 @@
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="index.html">Home</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" id="doubleClickLink" href="shop.html">
+              Shop
+            </a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href=" pages/about.html">About Us </a></li>
+          <li class="nav-item"><a class="nav-link" href=" pages/our-gamers.html">Our Gamers</a></li>
+
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Tournament
@@ -45,43 +54,27 @@
               <li><a class="dropdown-item" href="#">Upcoming matches</a></li>
               <li><a class="dropdown-item" href="#">Match details</a></li>
               <li><a class="dropdown-item" href="#">Player details</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+              
+              
             </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Pages
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href=" pages/about.html">About Us </a></li>
-              <li><a class="dropdown-item" href=" pages/our-gamers.html">Our Gamers</a></li>
-              <li><a class="dropdown-item" href=" pages/sponsers.html">Sponsors</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href=" pages/help.html">Help</a></li>
-              <li><a class="dropdown-item" href=" pages/error.html">Error 404</a></li>
-            </ul>
-            
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="doubleClickLink" href="shop.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Shop
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="  shop/addtocart.html">Add to cart</a></li>
-                <li><a class="dropdown-item" href="  shop/checkout.html">Check Out</a></li>
-              </ul>
-            
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
           </li>
           
+          
+            
+              <li class="nav-item"><a class="nav-link" href=" pages/sponsers.html">Sponsors</a></li>
+              <li class="nav-item"><a class="nav-link" href=" pages/help.html">Help</a></li>
+            
+            
+        
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="contact.html">Contact</a>
           </li>
           
         </ul>
+        <li><hr class="dropdown-divider"></li>
         <form class="d-flex searchh align-items-center" role="search">
             <div><i class="fa-solid fa-magnifying-glass me-4 mt-3"></i></div>
             
@@ -90,7 +83,8 @@
         </form>
       </div>
     </div>
-  </nav>
+  </nav></header>
+ <!-- Hero Section -->
       <section class="hero-section">
         <div class="container">
         <div class="hero-content">
@@ -125,6 +119,10 @@
         </div>
         <div class="gradiant-border"></div>
         </section>
+
+<!-- Matches Section -->
+
+
         <section class="matches-section padding">
           <div class="container">
           <div class="section-heading  mt-4 mb-40 text-center wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1000ms">
@@ -198,6 +196,8 @@
           </ul>
           </div>
           </section>
+<!-- Watch live section -->
+
           <section class="watch-live-section pt-5 pb-5">
             <div class="container">
             <div class="section-heading mb-40 text-center wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1000ms">
@@ -245,6 +245,7 @@
            
             </div>
             </section>
+            <!-- Team Section -->
             <section class="team-section padding-bottom">
 <div class="container">
 <div class="section-heading text-center mb-40 wow fadeInDown" data-wow-delay="200ms" >
@@ -340,7 +341,7 @@ committed team.</p>
 </div>
             </section>
 
-
+<!-- Contact Section -->
             <section class="contact-section pt-5 pb-5">
               <div class="container">
               <div class="row align-items-center">
@@ -379,7 +380,7 @@ committed team.</p>
               </div>
               </section>
 
-                 
+     <!-- Sponsors Section -->            
                   <div class="logos">
                     <div class="logos-slide">
                       <img src="assets/img/client-2.png" />
@@ -398,6 +399,8 @@ committed team.</p>
                       <img src="assets/img/client-6.png" />
                     </div>
                   </div>
+<!-- Shop Section -->
+
                 <section class="shop-section ">
                   <div class="container">
                   <div class="section-heading  text-center wow fadeInDown" data-wow-delay="200ms">
@@ -415,7 +418,7 @@ committed team.</p>
                           <div class="product-thumb">
                           <img src="assets/img/product-2.png" alt="img">
                           <a href="#" class="badge hot">Hot</a>
-                          <a href=" #" class="default-btn">Add To Cart<span></span></a>
+                          <a href="shop/addtocart.html" class="default-btn">Add To Cart<span></span></a>
                           </div>
                           <div class="product-info">
                           <div class="product-inner">
@@ -438,7 +441,7 @@ committed team.</p>
                             <div class="product-thumb">
                             <img src="assets/img/product-5.png" alt="img">
                             <a href="#" class="badge out-stock">Out Of Stock</a>
-                            <a href=" #" class="default-btn">Add To Cart<span></span></a>
+                            <a href="shop/addtocart.html" class="default-btn">Add To Cart<span></span></a>
                             </div>
                             <div class="product-info">
                             <div class="product-inner">
@@ -461,7 +464,7 @@ committed team.</p>
                               <div class="product-thumb">
                               <img src="assets/img/product-1.png" alt="img">
                               <a href="#" class="badge in-stock">In Stock</a>
-                              <a href=" #" class="default-btn">Add To Cart<span></span></a>
+                              <a href="shop/addtocart.html" class="default-btn">Add To Cart<span></span></a>
                               </div>
                               <div class="product-info">
                               <div class="product-inner">
@@ -484,7 +487,7 @@ committed team.</p>
                                 <div class="product-thumb">
                                 <img src="assets/img/product-5.png" alt="img">
                                 <a href="#" class="badge out-stock">Out Of Stock</a>
-                                <a href=" #" class="default-btn">Add To Cart<span></span></a>
+                                <a href="shop/addtocart.html" class="default-btn">Add To Cart<span></span></a>
                                 </div>
                                 <div class="product-info">
                                 <div class="product-inner">
@@ -507,7 +510,7 @@ committed team.</p>
                                   <div class="product-thumb">
                                   <img src="assets/img/product-4.png" alt="img">
                                   <a href="#" class="badge hot">Hot</a>
-                                  <a href=" #" class="default-btn">Add To Cart<span></span></a>
+                                  <a href="shop/addtocart.html" class="default-btn">Add To Cart<span></span></a>
                                   </div>
                                   <div class="product-info">
                                   <div class="product-inner">
@@ -530,7 +533,7 @@ committed team.</p>
                                     <div class="product-thumb">
                                     <img src="assets/img/product-3.png" alt="img">
                                     <a href="#" class="badge sale">-70%</a>
-                                    <a href=" #" class="default-btn">Add To Cart<span></span></a>
+                                    <a href="shop/addtocart.html" class="default-btn">Add To Cart<span></span></a>
                                     </div>
                                     <div class="product-info">
                                     <div class="product-inner">
@@ -558,7 +561,7 @@ committed team.</p>
                   </section>
                   
                   
-                 
+    <!-- blog section -->
                   <section class="blog-section">
                     <div class="container">
                     <div class="section-heading mb-40 text-center wow fadeInLeftBig" data-wow-delay="200ms" >
@@ -631,6 +634,7 @@ committed team.</p>
                     </div>
                     </div>
                     </section>
+   <!-- Footer Section -->
                     <footer class="footer-section">
                       <div class="container">
                       <div class="row footer-items">
@@ -725,19 +729,17 @@ committed team.</p>
   });
 </script>
 
-<link rel="stylesheet" type="text/css" href="path-to-slick-slider/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="path-to-slick-slider/slick/slick-theme.css">
+
 <script src="assets/js/wow.min.js"></script>
 
 <script>
   new WOW().init();
   </script>
-    <script src="assets/js/swiper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     
    
-   <script src="assets/js/shop.js"></script>
+  
  
 
 </body>
