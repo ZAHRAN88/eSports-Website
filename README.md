@@ -33,3 +33,5 @@ Technologies used in the project:
 *   Bootstrap
 *   git
 *   JS
+*   WOW Animation
+*   Slick.js
